@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<chroma>
+  <Param>
+    <InlineMeasurements>
+      <elem>
+        <annotation>
+          Read the propagator
+        </annotation>
+        <Name>QIO_READ_NAMED_OBJECT</Name>
+        <Frequency>1</Frequency>
+        <NamedObject>
+          <object_id>L_quark_propagator</object_id>
+          <object_type>LatticePropagator</object_type>
+        </NamedObject>
+        <File>
+          <file_name>/lqcd_data_path/precomputed_Propagators/C24P29/prop_10000_CoulombWall_t19-n1_P505050_m-0.2770_single</file_name>
+          <parallel_io>true</parallel_io>
+        </File>
+      </elem>
+
+      <elem>
+        <annotation>
+          Read the propagator
+        </annotation>
+        <Name>QIO_READ_NAMED_OBJECT</Name>
+        <Frequency>1</Frequency>
+        <NamedObject>
+          <object_id>S_quark_propagator</object_id>
+          <object_type>LatticePropagator</object_type>
+        </NamedObject>
+        <File>
+          <file_name>/lqcd_data_path/precomputed_Propagators/C24P29/prop_10000_CoulombWall_t19-n1_P505050_m-0.2400_single</file_name>
+          <parallel_io>true</parallel_io>
+        </File>
+      </elem>
+
+      <elem>
+        <annotation>
+          Read the propagator
+        </annotation>
+        <Name>QIO_READ_NAMED_OBJECT</Name>
+        <Frequency>1</Frequency>
+        <NamedObject>
+          <object_id>C_quark_propagator</object_id>
+          <object_type>LatticePropagator</object_type>
+        </NamedObject>
+        <File>
+          <file_name>/lqcd_data_path/precomputed_Propagators/C24P29/prop_10000_CoulombWall_t19-n1_P505050_m0.4800_single</file_name>
+          <parallel_io>true</parallel_io>
+        </File>
+      </elem>
+
+      <elem>
+        <annotation>
+          Compute the measurements you build
+        </annotation>
+        <Name>My_Measurements</Name>
+        <Param>
+          <cfg_serial>10000</cfg_serial>
+          <t_src>19</t_src>
+          <hadrons>
+            <elem>PROTON</elem>
+            <elem>SIGMA+-</elem>
+            <elem>OMEGA_x</elem>
+            <elem>DELTA+_x</elem>
+            <elem>XI</elem>
+          </hadrons>
+          <l_prop>L_quark_propagator</l_prop>
+          <s_prop>S_quark_propagator</s_prop>
+          <c_prop>C_quark_propagator</c_prop>
+          <file_name>./data.iog</file_name>
+        </Param>
+      </elem>
+
+    </InlineMeasurements>
+    <nrow>24 24 24 72</nrow>
+  </Param>
+
+  <RNG>
+    <Seed>
+      <elem>11</elem>
+      <elem>11</elem>
+      <elem>11</elem>
+      <elem>0</elem>
+    </Seed>
+  </RNG>
+
+  <Cfg>
+    <cfg_type>WEAK_FIELD</cfg_type>
+    <cfg_file>dummy</cfg_file>
+    <parallel_io>true</parallel_io>
+  </Cfg>
+
+</chroma>
