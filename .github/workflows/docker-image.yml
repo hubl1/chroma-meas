@@ -36,5 +36,6 @@ jobs:
           tags: |
             latest
             ${{ github.ref_name }}
+          outputs: type=registry
           cache-from: type=gha
           cache-to: type=gha,mode=max
