@@ -32,10 +32,8 @@ jobs:
         with:
           context: .
           push: true
-          name: ghcr.io/hubl1/chroma-meas
           tags: |
-            latest
-            ${{ github.ref_name }}
-          outputs: type=registry
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
